@@ -29,6 +29,8 @@ class Server:
         Handler = http.server.SimpleHTTPRequestHandler
 
         print("==[ Maitreya Server 1.0 ]==\n")
+        socketserver.TCPServer.allow_reuse_address = True
+        
         with socketserver.TCPServer(("", port), Handler) as httpd:
             print("Serving at port", port)
             httpd.serve_forever()
@@ -37,4 +39,3 @@ class Server:
         return int(sys.argv[1]) if len(sys.argv) > 1 else self.DEFAULT_PORT
 
 Server().run_server()
-

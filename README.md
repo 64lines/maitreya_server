@@ -6,10 +6,10 @@ Maitreya is a minimalistic server that serves simple html files.
 
 Running the server on the 8000 port:
 ```bash
-python mserver
+python mserver.py
 ```
 
 Running the server on an specific port:
 ```bash
-$ python mserver 8888
+$ python mserver.py 8888
 ```
